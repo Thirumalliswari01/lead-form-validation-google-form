@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova Solutions Lead Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-header">
+            <h1>TechNova Solutions</h1>
+            <p>Lead Management Workflow</p>
+        </div>
+
+        <div class="description-section">
+            <h2>Description of the Solution</h2>
+            <div class="description-content">
+                <p>The proposed workflow for TechNova Solutions addresses lead management by automating key processes, ensuring efficiency and scalability. This solution includes the following:</p>
+                
+                <div class="feature-block">
+                    <h3>1. Basic Lead Capture and Scoring:</h3>
+                    <ul>
+                        <li>A form is used to collect essential lead details, including company size, budget, industry, urgency, and comments.</li>
+                        <li>A scoring system is designed to prioritize leads based on criteria like company size, budget, and urgency.</li>
+                        <li>Automation processes calculate scores, categorize leads, and take appropriate actions.</li>
+                    </ul>
+                </div>
+
+                <div class="feature-block">
+                    <h3>2. Addressing Edge Cases:</h3>
+                    <ul>
+                        <li>Incomplete data is routed for review and follow-up.</li>
+                        <li>High-value leads are flagged for immediate attention.</li>
+                        <li>Time zones are accommodated for scheduling follow-ups.</li>
+                    </ul>
+                </div>
+
+                <div class="feature-block">
+                    <h3>3. Scaling and Advanced Implementation:</h3>
+                    <ul>
+                        <li>Sales reps are assigned leads evenly using a dedicated system.</li>
+                        <li>Keywords are extracted from the "Comments" field to categorize leads.</li>
+                        <li>A follow-up system ensures timely interactions with leads.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="successMessage" class="success-message">
+            Your response has been recorded. Thank you!
+        </div>
+
+        <form id="leadForm">
+            <div class="form-section">
+                <div class="form-group">
+                    <label class="question required">Company Size</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="companySize" id="size1" value="1-50" required>
+                            <label for="size1">1-50 employees</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="companySize" id="size2" value="51-200">
+                            <label for="size2">51-200 employees</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="companySize" id="size3" value="201-1000">
+                            <label for="size3">201-1000 employees</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="companySize" id="size4" value="1000+">
+                            <label for="size4">1000+ employees</label>
+                        </div>
+                    </div>
+                    <div class="validation-message" id="companySizeError">This is a required question</div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="form-group">
+                    <label class="question required">Annual Budget</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="budget" id="budget1" value="<10000" required>
+                            <label for="budget1">Less than $10,000</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="budget" id="budget2" value="10000-50000">
+                            <label for="budget2">$10,000 - $50,000</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="budget" id="budget3" value="50001-100000">
+                            <label for="budget3">$50,001 - $100,000</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="budget" id="budget4" value=">100000">
+                            <label for="budget4">More than $100,000</label>
+                        </div>
+                    </div>
+                    <div class="validation-message" id="budgetError">This is a required question</div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="form-group">
+                    <label class="question required">Industry</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="industry" id="tech" value="Technology" required>
+                            <label for="tech">Technology</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="industry" id="finance" value="Finance">
+                            <label for="finance">Finance</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="industry" id="healthcare" value="Healthcare">
+                            <label for="healthcare">Healthcare</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="industry" id="retail" value="Retail">
+                            <label for="retail">Retail</label>
+                        </div>
+                    </div>
+                    <div class="validation-message" id="industryError">This is a required question</div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="form-group">
+                    <label class="question required">Urgency</label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" name="urgency" id="urgent1" value="Immediate" required>
+                            <label for="urgent1">Immediate (within 1 month)</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="urgency" id="urgent2" value="Short-term">
+                            <label for="urgent2">Short-term (1-3 months)</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="urgency" id="urgent3" value="Medium-term">
+                            <label for="urgent3">Medium-term (3-6 months)</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" name="urgency" id="urgent4" value="Long-term">
+                            <label for="urgent4">Long-term (6+ months)</label>
+                        </div>
+                    </div>
+                    <div class="validation-message" id="urgencyError">This is a required question</div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="form-group">
+                    <label class="question">Comments</label>
+                    <textarea id="comments" name="comments" placeholder="Your answer"></textarea>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button type="submit">Submit</button>
+                <button type="reset">Clear form</button>
+            </div>
+        </form>
+
+        <div class="footer">
+            <p>Never submit passwords through this form</p>
+            <p>This content is created for TechNova Solutions</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
